@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CFragment">
+
+
+    <TextView
+        android:id="@+id/textViewB"
+        android:layout_width="205dp"
+        android:layout_height="354dp"
+        android:text="C"
+        android:textSize="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etNumero1"
+        android:layout_width="118dp"
+        android:layout_height="79dp"
+        android:ems="10"
+        android:text="0"
+        android:textSize="44dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textViewA"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewB"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewA"
+        app:layout_constraintEnd_toStartOf="@+id/etNumero2"
+        app:layout_constraintStart_toEndOf="@+id/etNumero1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewB"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+    <TextView
+        android:id="@+id/etNumero2"
+        android:layout_width="118dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/textViewB" />
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="213dp"
+        android:layout_height="64dp"
+        android:text="Result"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonA"
+        app:layout_constraintEnd_toStartOf="@+id/textViewResult"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/etResult"
+        android:layout_width="118dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="76dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/textViewA" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
