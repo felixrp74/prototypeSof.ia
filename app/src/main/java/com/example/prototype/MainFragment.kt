@@ -29,8 +29,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonMain.setOnClickListener {
-            findNavController().navigate(R.id.action_AFragment_to_BFragment)
+        binding.btnGoAFragment.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_AFragment)
         }
     }
 

@@ -27,7 +27,11 @@
         android:id="@+id/CFragment"
         android:name="com.example.prototype.CFragment"
         android:label="fragment_c"
-        tools:layout="@layout/fragment_c" />
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_CFragment_to_DFragment"
+            app:destination="@id/DFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.prototype.MainFragment"
@@ -37,4 +41,9 @@
             android:id="@+id/action_mainFragment_to_AFragment"
             app:destination="@id/AFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/DFragment"
+        android:name="com.example.prototype.DFragment"
+        android:label="fragment_d"
+        tools:layout="@layout/fragment_d" />
 </navigation>

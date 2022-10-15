@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.prototype.databinding.FragmentABinding
 import com.example.prototype.databinding.FragmentBBinding
@@ -28,35 +29,32 @@ class BFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-/*
-        setupRecyclerView()
-        setupSearchView()
-        setupObservers()
-*/
-        binding.buttonSum.setOnClickListener {
 
+        binding.buttonSum.setOnClickListener {
 
             val valueA = binding.etNumero1.text.toString()
             val valueB = binding.etNumero2.text.toString()
 
+            if (valueA != "" && valueB != "") {
 
+                val numero1 = Integer.parseInt(valueA)
+                val numero2 = Integer.parseInt(valueB)
 
-            val numero1 = Integer.parseInt(valueA)
-            val numero2 = Integer.parseInt(valueB)
+                val sum: Int = numero1 + numero2
 
-            val sum : Int = numero1 + numero2
+                val sumita = sum.toString()
 
-            val sumita = sum.toString()
+                val bundle = Bundle()
+                val suma = Suma(valueA, valueB, sumita)
+                bundle.putParcelable("suma", suma)
+                Log.d("TAG", suma.toString())
 
-            val bundle = Bundle()
-            val suma = Suma(valueA,valueB,sumita)
-            bundle.putParcelable("suma", suma)
-            Log.d("TAG", suma.toString())
-
-            findNavController().navigate(R.id.action_BFragment_to_CFragment, bundle)
-
+                findNavController().navigate(R.id.action_BFragment_to_CFragment, bundle)
+            } else {
+                Toast.makeText(view.context, "Complete los sumandos por favor.", Toast.LENGTH_SHORT)
+                    .show()
+            }
 
         }
     }
-
 }

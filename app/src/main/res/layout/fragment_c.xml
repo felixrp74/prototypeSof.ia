@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo1"
     tools:context=".CFragment">
 
 
@@ -50,15 +51,17 @@
         android:id="@+id/etNumero2"
         android:layout_width="118dp"
         android:layout_height="79dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="text"
         android:text="0"
         android:textSize="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textViewResult"
-        app:layout_constraintTop_toBottomOf="@+id/textViewB" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewB"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewA"
@@ -66,7 +69,7 @@
         android:layout_height="64dp"
         android:text="Result"
         android:textSize="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonA"
+        app:layout_constraintBottom_toTopOf="@+id/buttonC"
         app:layout_constraintEnd_toStartOf="@+id/textViewResult"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,22 +80,22 @@
         android:id="@+id/etResult"
         android:layout_width="118dp"
         android:layout_height="79dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="132dp"
         android:ems="10"
         android:inputType="text"
         android:text="0"
         android:textSize="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toEndOf="@+id/textViewA" />
 
     <Button
-        android:id="@+id/buttonA"
+        android:id="@+id/buttonC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:textSize="44dp"
+        android:background="@drawable/button"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

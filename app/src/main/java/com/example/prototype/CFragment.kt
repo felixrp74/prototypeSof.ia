@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.prototype.databinding.FragmentBBinding
 import com.example.prototype.databinding.FragmentCBinding
 
@@ -42,6 +43,11 @@ class CFragment : Fragment() {
         binding.etNumero1.text = suma.numero1
         binding.etNumero2.text = suma.numero2
         binding.etResult.text = suma.suma
+
+        binding.buttonC.setOnClickListener {
+            findNavController().navigate(R.id.action_CFragment_to_DFragment)
+        }
+
 
 
     }
